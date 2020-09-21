@@ -39,7 +39,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many)
-plugins=(git tmux taskwarrior)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -52,17 +52,13 @@ alias gpl='git log --pretty=format:"%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN
 alias dh='dirs -v'
 alias r='ranger'
 alias nvcfg='nvim ~/.config/nvim/init.vim'
-alias em='emacs --insecure'
-alias ta='task add'
 alias lhalt='ls -halt'
 alias l='ls -1'
 alias rg="rg --colors 'path:fg:yellow'"
-alias tm="tmux"
 
 ############################################
 # Environment vars
 ############################################
-export DISPLAY=localhost:0.0
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgrep.conf
 export EDITOR=nvim
 export VIEWER="vim -R"
