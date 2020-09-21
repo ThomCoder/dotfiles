@@ -55,6 +55,7 @@ alias nvcfg='nvim ~/.config/nvim/init.vim'
 alias lhalt='ls -halt'
 alias l='ls -1'
 alias rg="rg --colors 'path:fg:yellow'"
+alias vim="nvim"
 
 ############################################
 # Environment vars
