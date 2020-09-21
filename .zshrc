@@ -1,0 +1,170 @@
+############################################
+# Oh-My-Zsh stuff
+############################################
+# Path to your oh-my-zsh installation.
+export ZSH="/home/thomas/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="gnzh"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+export UPDATE_ZSH_DAYS=6
+
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Tmux autostart
+ZSH_TMUX_AUTOSTART="false"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+HIST_STAMPS="yyyy-mm-dd"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many)
+plugins=(git tmux taskwarrior)
+
+source $ZSH/oh-my-zsh.sh
+
+############################################
+# Aliases
+############################################
+alias e='exit'
+alias nv='nvim'
+alias gpl='git log --pretty=format:"%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s"'
+alias dh='dirs -v'
+alias r='ranger'
+alias nvcfg='nvim ~/.config/nvim/init.vim'
+alias em='emacs --insecure'
+alias ta='task add'
+alias lhalt='ls -halt'
+alias l='ls -1'
+alias rg="rg --colors 'path:fg:yellow'"
+alias tm="tmux"
+
+############################################
+# Environment vars
+############################################
+export DISPLAY=localhost:0.0
+export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgrep.conf
+export EDITOR=nvim
+export VIEWER="vim -R"
+
+############################################
+# Sourced Files
+############################################
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -e ~/bin ] && export PATH=$HOME/bin:$PATH
+export PATH=/usr/lib/ccache:$PATH
+
+############################################
+# Functions and quirks
+############################################
+# Print empty line before printing prompt; makes series of long outputs easier to read
+precmd() { print "" }
+# Highlight first ambiguous character in tab-complete
+zstyle ':completion:*' show-ambiguity "$color[fg-red]"
+
+#
+#   mkcd command
+#   This is an improvised version of the mkcd command at http://superuser.com/questions/152794/is-there-a-shortcut-to-mkdir-foo-and-immediately-cd-into-it
+#
+function mkcd {
+  last=$(eval "echo \$$#")
+  if [ ! -n "$last" ]; then
+    echo "Enter a directory name"
+  elif [ -d $last ]; then
+    echo "\`$last' already exists"
+  else
+    mkdir $@ && cd $last
+  fi
+}
+
+############################################
+# General zsh flags
+############################################
+
+# Display red dots while waiting for completion
+COMPLETION_WAITING_DOTS="true"
+
+# why would you type 'cd dir' if you could just type 'dir'?
+setopt AUTO_CD
+
+# Now we can pipe to multiple outputs!
+setopt MULTIOS
+
+# This will use named dirs when possible
+setopt AUTO_NAME_DIRS
+
+# If we have a glob this will expand it
+setopt GLOB_COMPLETE
+
+# No more annoying pushd messages...
+setopt PUSHD_SILENT
+
+# blank pushd goes to home
+setopt PUSHD_TO_HOME
+
+# 10 second wait if you do something that will delete everything.  I wish I'd had this before...
+setopt RM_STAR_WAIT
+
+############################################
+# History
+############################################
+
+# Remember about a years worth of history (AWESOME)
+SAVEHIST=10000
+HISTSIZE=12000
+
+# Don't overwrite, append!
+setopt APPEND_HISTORY
+
+# Killer: share history between multiple shells
+setopt SHARE_HISTORY
+
+# If I type cd and then cd again, only save the last one
+setopt HIST_IGNORE_DUPS
+
+# Even if there are commands inbetween commands that are the same, still only save the last one
+setopt HIST_IGNORE_ALL_DUPS
+
+# Pretty Obvious.  Right?
+setopt HIST_REDUCE_BLANKS
+
+# If a line starts with a space, don't save it.
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
+
+# When using a hist thing, make a newline show the change before executing it.
+setopt HIST_VERIFY
+
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+
+############################################
+# Functions
+############################################
+
+_force_rehash() {
+  (( CURRENT == 1 )) && rehash
+  return 1
+}
+
