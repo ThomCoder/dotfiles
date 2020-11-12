@@ -132,8 +132,9 @@ Plug 'tpope/vim-fugitive'
 " Comment helper
 Plug 'scrooloose/nerdcommenter'
 
-" Colorscheme; looks just awesome in vim
+" Colorschemes
 Plug 'morhetz/gruvbox'
+Plug 'patstockwell/vim-monokai-tasty'
 
 " Make moving splits less painful
 Plug 'wesQ3/vim-windowswap'
@@ -167,10 +168,10 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
 
-" Use gruvbox theme
+" Configure theming
 let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='medium'
-color gruvbox
+let g:gruvbox_contrast_dark='hard'
+color vim-monokai-tasty
 set background=dark
 
 " Taskwarrior
