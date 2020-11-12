@@ -178,11 +178,21 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 " set completeopt=menu,menuone,preview,noselect,noinsert
 
+" TODO
+" let g:ncm2_pyclang#library_path = '/usr/lib/llvm-7/lib/libclang.so.1'
+"let g:ncm2_pyclang#database_path = [
+"            \ 'compile_commands.json']
+
 " show full tag hierarchy in statusbar
-let g:airline#extensions#tagbar#flags = 'f'
+let g:airline#extensions#tagbar#flags = ''
+" let g:airline#extensions#tagbar#flags = 'f'
 " theme in statusbar
-let g:airline_theme='jellybeans'
+let g:airline_theme='base16_monokai'
 let g:airline#extensions#tabline#enabled = 0
+
+" Set Goyo dimensions to my preference
+let g:goyo_height = "100%"
+let g:goyo_width = 120
 
 " Make RipGrep highlight the matches
 let g:rg_highlight = "true"
@@ -200,9 +210,26 @@ let g:gruvbox_contrast_dark='hard'
 color vim-monokai-tasty
 set background=dark
 
-" Taskwarrior
-let g:task_rc_override = 'rc.defaultwidth=0'
-let g:task_rc_override = 'rc.defaultheight=0'
+" Help Limelight use gruvbox
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+" Enable autosave
+let g:auto_save = 1
+" Save when changing a file in normal mode or leaving insert mode
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
+" Save all files when autosaving (autosaving just one feels strange to me ;) )
+let g:auto_save_write_all_buffers = 1
+
+" Markdown-Preview.nvim
+" Open in Chromium (Firefox's pdf export sucks)
+let g:mkdp_browser='chromium'
+
+" NERDTree
+" Regexes to ignore (e.g. I don't need object files)
+let g:NERDTreeIgnore = ['\.o$','\.a$','\.so$']
+
+" 
 
 """"""""""""""""""""""""""""""""
 " Macros and keymaps
