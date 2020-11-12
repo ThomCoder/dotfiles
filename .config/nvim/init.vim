@@ -333,3 +333,12 @@ nnoremap <silent> [f :call
 " jump to the next function
 nnoremap <silent> ]f :call
 \ search('\(\(if\\|for\\|while\\|switch\\|catch\)\_s*\)\@64<!(\_[^)]*)\_[^;{}()]*\zs{', "w")<CR>
+
+function CopyFileBasename()
+	" Get filename without extension; this can later be used for searching
+	" things. E.g. i have file.c open and want so search for file.h
+	let foo = expand('%:r')
+	" Copy this stuff to system clipboard
+	call setreg('+', foo)
+endfunction
+
