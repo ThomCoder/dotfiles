@@ -145,6 +145,9 @@ Plug 'junegunn/limelight.vim'
 " Ninja like buffer juggling
 Plug 'jeetsukumaran/vim-buffergator'
 
+" For when you are too lazy to type for movement
+Plug 'easymotion/vim-easymotion'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
