@@ -66,6 +66,9 @@ alias spd="pandoc --reference-links" # Short for "standard pandoc"
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/ripgrep.conf
 export EDITOR=nvim
 export VIEWER="vim -R"
+# This is dirty, but necessary on some systems that construct weird loacles
+# If this is not set, some terminal programs might screw up
+export LANG=en_US.UTF-8
 
 ############################################
 # Sourced Files
