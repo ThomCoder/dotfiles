@@ -75,7 +75,7 @@ export LANG=en_US.UTF-8
 ############################################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -e ~/bin ] && export PATH=$HOME/bin:$PATH
-export PATH=/usr/lib/ccache:$PATH
+[ -f /usr/lib/ccache ] && export PATH=/usr/lib/ccache:$PATH
 
 ############################################
 # Functions and quirks
