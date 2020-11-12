@@ -21,6 +21,7 @@ set scrolloff=10
 
 " If a file was changed on disk but not inside nvim just reload it
 set autoread
+au CursorHold * checktime " see https://stackoverflow.com/a/18866818
 
 " Incur indent from previous line. Makes work with messed up files much nicer
 set autoindent
