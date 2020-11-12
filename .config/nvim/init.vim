@@ -139,6 +139,9 @@ Plug 'patstockwell/vim-monokai-tasty'
 " Make moving splits less painful
 Plug 'wesQ3/vim-windowswap'
 
+" Hyperfocus
+Plug 'junegunn/limelight.vim'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
