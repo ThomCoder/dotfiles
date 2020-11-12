@@ -56,6 +56,9 @@ alias lhalt='ls -halt'
 alias l='ls -1'
 alias rg="rg --colors 'path:fg:yellow'"
 alias vim="nvim"
+alias t="true" # Solves an annoying bug displaying return codes in the shell
+alias vd="nvim ."
+alias spd="pandoc --reference-links" # Short for "standard pandoc"
 
 ############################################
 # Environment vars
