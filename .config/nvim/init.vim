@@ -156,6 +156,9 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
+" General plugin enhancer
+Plug 'tpope/vim-repeat'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
