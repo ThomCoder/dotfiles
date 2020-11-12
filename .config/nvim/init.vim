@@ -159,6 +159,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 " General plugin enhancer
 Plug 'tpope/vim-repeat'
 
+" Highlight trailing spaces
+Plug 'ntpeters/vim-better-whitespace'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
