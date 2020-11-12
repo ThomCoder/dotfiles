@@ -142,6 +142,9 @@ Plug 'wesQ3/vim-windowswap'
 " Hyperfocus
 Plug 'junegunn/limelight.vim'
 
+" Ninja like buffer juggling
+Plug 'jeetsukumaran/vim-buffergator'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
