@@ -315,10 +315,10 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 
-nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
-nnoremap <silent> <Leader>> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
-nnoremap <silent> <Leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 4/3)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 3/4)<CR>
+nnoremap <silent> <Leader>> :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
+nnoremap <silent> <Leader>< :exe "vertical resize " . (winwidth(0) * 3/4)<CR>
 
 " Show relative line numbers in normal mode and absolute in insert mode
 augroup numbertoggle
