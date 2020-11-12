@@ -126,6 +126,9 @@ Plug 'junegunn/goyo.vim'
 " Surround text
 Plug 'tpope/vim-surround'
 
+" Git wrapper
+Plug 'tpope/vim-fugitive'
+
 " Comment helper
 Plug 'scrooloose/nerdcommenter'
 
