@@ -29,10 +29,10 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 
-" enable indentation/linewrap
-set breakindent
-" ident by an additional 2 characters on wrapped lines, when line >= 40 characters, put 'showbreak' at start of line
-set breakindentopt=shift:2,min:40,sbr
+" do not break in the middle of a word
+" set linebreak
+" ident by an additional 4 characters on wrapped lines, when line >= 40 characters, put 'showbreak' at start of line
+set breakindentopt=shift:4,min:40,sbr
 " append '>>' to indent
 set showbreak=>>
 
