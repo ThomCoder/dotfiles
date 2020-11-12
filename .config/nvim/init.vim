@@ -114,6 +114,12 @@ Plug 'junegunn/fzf.vim'
 " Filesystem tree viewer
 Plug 'scrooloose/nerdtree'
 
+" Tagbar
+Plug 'majutsushi/tagbar'
+if executable("ctags") != 1
+  echo "ctags not found in path; Tagbar not fully functional"
+endif
+
 " Surround text
 Plug 'tpope/vim-surround'
 
