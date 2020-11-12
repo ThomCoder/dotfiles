@@ -92,6 +92,9 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 " enables completion of file paths
 Plug 'ncm2/ncm2-path'
+" enables language completions
+Plug 'ncm2/ncm2-pyclang' " Clang/C/C++
+" Plug 'ncm2/ncm2-jedi'    " Python
 
 " Use ALE linter (that's the shit!)
 Plug 'w0rp/ale'
