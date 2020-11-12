@@ -255,7 +255,16 @@ nmap <C-p> :Files<CR>
 
 " Nerdtree
 nmap <leader>n :NERDTreeFind<CR>
-nmap <leader>N :NERDTreeClose<CR>
+nmap <leader>N :NERDTree<CR>
+
+" Tagbar
+nmap <leader>tb :TagbarOpenAutoClose<CR>
+
+" Limelight
+nmap <leader>l :Limelight!!<CR>
+
+" Goyo
+nmap <leader>g :Goyo<CR>
 
 " Ncm2 completion menu with Tab
 " Use <TAB> to select the popup menu:
@@ -265,6 +274,36 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Make my preffered folding method less acrobatic
 :nnoremap <leader>f zf%
 :nnoremap <leader>o zo
+
+" Use <leader><delete_key> to delete sth. without putting it in a buffer for pasting
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+xnoremap <leader>p "_dP
+vnoremap <leader>x "_x
+
+" Open a fuzzy searchable command window
+nnoremap <leader>c :Commands<CR>
+
+" Get the current filename without the extension to the clipboard
+nnoremap <leader>f :call CopyFileBasename()<CR>
+
+" ALE maps
+nnoremap <leader>ag :ALE
+nnoremap <leader>ad :ALEGoToDefinition<CR>
+nnoremap <leader>av :ALEGoToDefinition -vsplit<CR>
+nnoremap <leader>ax :ALEGoToDefinition -split<CR>
+nnoremap <leader>ar :ALEFindReferences<CR>
+nnoremap <leader>as :ALESymbolSearch 
+nnoremap <leader>ai :ALEImport<CR>
+nnoremap <C-Space>  :ALEComplete<CR>
+nnoremap <leader>at :ALEGoToTypeDefinition<CR>
+nnoremap <leader>ap :ALEPrevious<CR>
+nnoremap <leader>an :ALENext<CR>
+nnoremap <leader>al :ALEDetail<CR>
+nnoremap <leader>at :ALEToggle<CR>
+
+" _K_ill all buffers, but don't close (neo)vim
+nnoremap <leader>k :%bd<CR>
 
 """"""""""""""""""""""""""""""""
 " Functions and Automatics
