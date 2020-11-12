@@ -148,6 +148,9 @@ Plug 'jeetsukumaran/vim-buffergator'
 " For when you are too lazy to type for movement
 Plug 'easymotion/vim-easymotion'
 
+" I am one lazy ass dude
+Plug '907th/vim-auto-save'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
