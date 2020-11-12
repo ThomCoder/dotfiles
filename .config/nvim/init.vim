@@ -12,7 +12,7 @@ let mapleader =" "
 set modifiable
 filetype plugin indent on
 syntax on
-set number relativenumber
+set number
 set wildmode=longest,list,full
 set nocompatible
 set splitbelow splitright
@@ -319,13 +319,6 @@ nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 4/3)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 3/4)<CR>
 nnoremap <silent> <Leader>> :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
 nnoremap <silent> <Leader>< :exe "vertical resize " . (winwidth(0) * 3/4)<CR>
-
-" Show relative line numbers in normal mode and absolute in insert mode
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
 
 " jump to the previous function
 nnoremap <silent> [f :call
