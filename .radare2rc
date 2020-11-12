@@ -4,6 +4,5 @@ e asm.pseudo=true
 e scr.utf8=true
 e scr.utf8.curvy=true
 e asm.middle=true
-e asm.describe=true
 e asm.ucase=true
 e io.cache=true
