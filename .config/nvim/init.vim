@@ -73,6 +73,8 @@ map <A-l> <C-w>l
 vnoremap <C-c> "+y
 map <A-p> "+P
 
+" Set up listchars (hidden characters); useful when setting \":set list\"
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 """"""""""""""""""""""""""""""""
 " Plugins
