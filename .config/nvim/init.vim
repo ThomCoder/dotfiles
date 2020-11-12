@@ -342,3 +342,11 @@ function CopyFileBasename()
 	call setreg('+', foo)
 endfunction
 
+" ToDo highlight on steroids
+augroup vimrc_todo
+    au!
+    au Syntax * syn match MyTodo /\v<(FIXME|NOTE|TODO|BUG|TRACE|XXX):/
+          \ containedin=.*Comment,vimCommentTitle
+augroup END
+hi def link MyTodo Todo
+
