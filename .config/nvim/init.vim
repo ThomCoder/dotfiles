@@ -162,6 +162,9 @@ Plug 'tpope/vim-repeat'
 " Highlight trailing spaces
 Plug 'ntpeters/vim-better-whitespace'
 
+" Git gutter
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
