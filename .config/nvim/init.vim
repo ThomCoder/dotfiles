@@ -120,6 +120,9 @@ if executable("ctags") != 1
   echo "ctags not found in path; Tagbar not fully functional"
 endif
 
+" Centered file view
+Plug 'junegunn/goyo.vim'
+
 " Surround text
 Plug 'tpope/vim-surround'
 
