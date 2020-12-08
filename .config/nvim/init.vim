@@ -161,22 +161,8 @@ call plug#end()
 """"""""""""""""""""""""""""""""
 " Plugin Config
 """"""""""""""""""""""""""""""""
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-
-" set completeopt to be what ncm2 expects
-" :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
-" set completeopt=menu,menuone,preview,noselect,noinsert
-
-" TODO
-" let g:ncm2_pyclang#library_path = '/usr/lib/llvm-7/lib/libclang.so.1'
-"let g:ncm2_pyclang#database_path = [
-"            \ 'compile_commands.json']
-
 " show full tag hierarchy in statusbar
 let g:airline#extensions#tagbar#flags = ''
-" let g:airline#extensions#tagbar#flags = 'f'
 " theme in statusbar
 let g:airline_theme='base16_monokai'
 let g:airline#extensions#tabline#enabled = 0
@@ -200,10 +186,6 @@ let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
 color vim-monokai-tasty
 set background=dark
-
-" Help Limelight use gruvbox
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
 
 " Enable autosave
 let g:auto_save = 1
@@ -251,16 +233,8 @@ nmap <leader>N :NERDTree<CR>
 " Tagbar
 nmap <leader>tb :TagbarOpenAutoClose<CR>
 
-" Limelight
-nmap <leader>l :Limelight!!<CR>
-
 " Goyo
 nmap <leader>g :Goyo<CR>
-
-" Ncm2 completion menu with Tab
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Make my preffered folding method less acrobatic
 :nnoremap <leader>f zf%
@@ -273,28 +247,16 @@ xnoremap <leader>p "_dP
 vnoremap <leader>x "_x
 
 " Open a fuzzy searchable command window
-nnoremap <leader>c :Commands<CR>
+nnoremap <leader>C :Commands<CR>
 
 " Get the current filename without the extension to the clipboard
 nnoremap <leader>f :call CopyFileBasename()<CR>
 
-" ALE maps
-nnoremap <leader>ag :ALE
-nnoremap <leader>ad :ALEGoToDefinition<CR>
-nnoremap <leader>av :ALEGoToDefinition -vsplit<CR>
-nnoremap <leader>ax :ALEGoToDefinition -split<CR>
-nnoremap <leader>ar :ALEFindReferences<CR>
-nnoremap <leader>as :ALESymbolSearch 
-nnoremap <leader>ai :ALEImport<CR>
-nnoremap <C-Space>  :ALEComplete<CR>
-nnoremap <leader>at :ALEGoToTypeDefinition<CR>
-nnoremap <leader>ap :ALEPrevious<CR>
-nnoremap <leader>an :ALENext<CR>
-nnoremap <leader>al :ALEDetail<CR>
-nnoremap <leader>at :ALEToggle<CR>
-
 " _K_ill all buffers, but don't close (neo)vim
 nnoremap <leader>k :%bd<CR>
+
+" Toggle render from better-whitespace
+nnoremap <leader>w :ToggleWhitespace<CR>
 
 """"""""""""""""""""""""""""""""
 " Functions and Automatics
