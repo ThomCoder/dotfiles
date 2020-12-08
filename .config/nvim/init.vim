@@ -184,7 +184,7 @@ let g:NERDSpaceDelims = 1
 " Configure theming
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
-color vim-monokai-tasty
+color xcodewwdc
 set background=dark
 
 " Enable autosave
