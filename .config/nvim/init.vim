@@ -153,6 +153,9 @@ Plug 'ntpeters/vim-better-whitespace'
 " Git gutter
 Plug 'airblade/vim-gitgutter'
 
+" Automatic handling of sessions
+Plug 'tpope/vim-obsession'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
