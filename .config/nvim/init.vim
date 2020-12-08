@@ -130,9 +130,6 @@ Plug 'arzg/vim-colors-xcode'
 " Make moving splits less painful
 Plug 'wesQ3/vim-windowswap'
 
-" Hyperfocus
-Plug 'junegunn/limelight.vim'
-
 " Ninja like buffer juggling
 Plug 'jeetsukumaran/vim-buffergator'
 
