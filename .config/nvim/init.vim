@@ -466,3 +466,10 @@ augroup vimrc_todo
 augroup END
 hi def link MyTodo Todo
 
+""""""""""""""""""""""""""""""""
+" Final touches
+" Some stuff just has to be
+" written at the end for Vim to
+" function properly.
+""""""""""""""""""""""""""""""""
+hi CursorLine   cterm=NONE ctermbg=Black ctermfg=NONE guibg=darkred guifg=white
