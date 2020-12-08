@@ -75,6 +75,8 @@ export LANG=en_US.UTF-8
 ############################################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -e ~/bin ] && export PATH=$HOME/bin:$PATH
+# Also use the /opt folder for optional files
+export PATH=$PATH:/opt
 [ -f /usr/lib/ccache ] && export PATH=/usr/lib/ccache:$PATH
 
 ############################################
