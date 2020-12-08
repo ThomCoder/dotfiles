@@ -125,7 +125,7 @@ Plug 'scrooloose/nerdcommenter'
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
-Plug 'patstockwell/vim-monokai-tasty'
+Plug 'arzg/vim-colors-xcode'
 
 " Make moving splits less painful
 Plug 'wesQ3/vim-windowswap'
