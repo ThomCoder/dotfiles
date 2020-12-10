@@ -427,6 +427,10 @@ nnoremap <leader>k :%bd<CR>
 " Toggle render from better-whitespace
 nnoremap <leader>w :ToggleWhitespace<CR>
 
+" Move between vim tabs more easily
+nnoremap <A-n> :tabnext<CR>
+nnoremap <A-p> :tabprevious<CR>
+
 """"""""""""""""""""""""""""""""
 " Functions and Automatics
 """"""""""""""""""""""""""""""""
