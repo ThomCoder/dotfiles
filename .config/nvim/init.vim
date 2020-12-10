@@ -100,6 +100,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-gitgutter'
 
 " The fuzzy finder (also includes Ripgrep)
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -148,9 +149,6 @@ Plug 'tpope/vim-repeat'
 
 " Highlight trailing spaces
 Plug 'ntpeters/vim-better-whitespace'
-
-" Git gutter
-Plug 'airblade/vim-gitgutter'
 
 " Automatic handling of sessions
 Plug 'tpope/vim-obsession'
