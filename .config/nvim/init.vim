@@ -89,6 +89,9 @@ call plug#begin()
 
 " Autocomplete awesomeness
 Plug 'neoclide/coc.nvim'
+if executable("nodejs") != 1
+  echo "nodejs not found in path; CoC.nvim not functional"
+endif
 
 " Airline status line
 Plug 'vim-airline/vim-airline'
