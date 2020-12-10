@@ -142,7 +142,6 @@ Plug '907th/vim-auto-save'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " General plugin enhancer
 Plug 'tpope/vim-repeat'
