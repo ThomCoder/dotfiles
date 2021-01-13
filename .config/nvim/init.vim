@@ -410,7 +410,7 @@ nmap <leader>tb :TagbarOpenAutoClose<CR>
 nmap <leader>g :Goyo<CR>
 
 " Make my preffered folding method less acrobatic
-:nnoremap <leader>f zf%
+:nnoremap <leader>z zf%
 :nnoremap <leader>o zo
 
 " Use <leader><delete_key> to delete sth. without putting it in a buffer for pasting
