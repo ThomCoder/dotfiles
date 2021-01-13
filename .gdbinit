@@ -1,3 +1,4 @@
+set pagination on
 tui enable
 layout src
 focus cmd
