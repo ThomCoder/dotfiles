@@ -59,6 +59,7 @@ alias vim="nvim"
 alias t="true" # Solves an annoying bug displaying return codes in the shell
 alias vd="nvim -S Session.vim"
 alias spd="pandoc --reference-links" # Short for "standard pandoc"
+alias mcm="make clean && bear make -j6" # Short for make clean && make
 
 ############################################
 # Environment vars
