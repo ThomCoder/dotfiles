@@ -153,6 +153,9 @@ Plug 'ntpeters/vim-better-whitespace'
 " Automatic handling of sessions
 Plug 'tpope/vim-obsession'
 
+" Debugging - yes in VIM!
+Plug 'puremourning/vimspector'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
@@ -198,6 +201,9 @@ let g:mkdp_browser='chromium'
 " NERDTree
 " Regexes to ignore (e.g. I don't need object files)
 let g:NERDTreeIgnore = ['\.o$','\.a$','\.so$']
+
+" Vimspector (debugging tool)
+let g:vimspector_enable_mappings = 'HUMAN'
 
 " COC.nvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
