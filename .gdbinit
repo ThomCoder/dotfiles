@@ -15,33 +15,20 @@ document qquit
 Quit without asking for confirmation.
 end
 
-define xac
-    dont-repeat
-    set $addr = (char *)($arg0)
-    set $endaddr = $addr + $arg1
-    while $addr < $endaddr
-        printf "%p: ", $addr
-        set $lineendaddr = $addr + 8
-        if $lineendaddr > $endaddr
-            set $lineendaddr = $endaddr
-        end
-        set $a = $addr
-        while $a < $lineendaddr
-            printf "0x%02x ", *(unsigned char *)$a
-            set $a++
-        end
-        printf "'"
-        set $a = $addr
-        while $a < $lineendaddr
-            printf "%c", *(char *)$a < 32 || *(char *)$a > 126 ? '.' : *(char *)$a
-            set $a++
-        end
-        printf "'\n"
-        set $addr = $addr + 8
-    end
+define xxd
+  if $argc < 2
+    set $size = sizeof(*$arg0)
+  else
+    set $size = $arg1
+  end
+  dump binary memory dump.bin $arg0 ((void *)$arg0)+$size
+  eval "shell xxd -o %d -g 1 dump.bin; rm dump.bin", ((void *)$arg0)
 end
+document xxd
+  Dump memory with xxd command (keep the address as offset)
 
-document xac
-Examine memory both as raw bytes as well as ascii print.
-usage: xac address count
+  xxd addr [size]
+    addr -- expression resolvable as an address
+    size -- size (in byte) of memory to dump
+            sizeof(*addr) is used by default
 end
