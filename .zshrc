@@ -93,21 +93,6 @@ precmd() { print "" }
 # Highlight first ambiguous character in tab-complete
 zstyle ':completion:*' show-ambiguity "$color[fg-red]"
 
-#
-#   mkcd command
-#   This is an improvised version of the mkcd command at http://superuser.com/questions/152794/is-there-a-shortcut-to-mkdir-foo-and-immediately-cd-into-it
-#
-function mkcd {
-  last=$(eval "echo \$$#")
-  if [ ! -n "$last" ]; then
-    echo "Enter a directory name"
-  elif [ -d $last ]; then
-    echo "\`$last' already exists"
-  else
-    mkdir $@ && cd $last
-  fi
-}
-
 ############################################
 # General zsh flags
 ############################################
