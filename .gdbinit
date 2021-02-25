@@ -32,3 +32,21 @@ document xxd
     size -- size (in byte) of memory to dump
             sizeof(*addr) is used by default
 end
+
+define memd5
+  if $argc < 2
+    set $size = sizeof(*$arg0)
+  else
+    set $size = $arg1
+  end
+  dump binary memory dump.bin $arg0 ((void *)$arg0)+$size
+  eval "shell md5sum dump.bin; rm dump.bin"
+end
+document memd5
+  Calculate md5 checksum of a range of memory
+
+  memd5 addr [size]
+    addr -- expression resolvable as an address
+    size -- size (in byte) of memory to dump
+            sizeof(*addr) is used by default
+end
