@@ -3,6 +3,8 @@ set trace-commands on
 set logging off
 set logging overwrite on
 set print frame-arguments all
+# print the full thing
+set print elements 0
 # set disassemble-next-line on
 
 # I have no need to debug std lib code
