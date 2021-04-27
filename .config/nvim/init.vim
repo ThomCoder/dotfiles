@@ -401,7 +401,7 @@ nmap <C-p> :Files<CR>
 
 " Nerdtree
 nmap <leader>n :NERDTreeFind<CR>
-nmap <leader>N :NERDTree<CR>
+nmap <leader>N :NERDTreeClose<CR>
 
 " Tagbar
 nmap <leader>tb :TagbarOpenAutoClose<CR>
