@@ -97,6 +97,9 @@ zstyle ':completion:*' show-ambiguity "$color[fg-red]"
 # General zsh flags
 ############################################
 
+# Prepare the zmv rename utility
+autoload zmv
+
 # Display red dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
