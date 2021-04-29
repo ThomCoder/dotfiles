@@ -164,7 +164,7 @@ call plug#end()
 " show full tag hierarchy in statusbar
 let g:airline#extensions#tagbar#flags = ''
 " theme in statusbar
-let g:airline_theme='base16_monokai'
+let g:airline_theme='minimalist'
 let g:airline#extensions#tabline#enabled = 0
 
 " Set Goyo dimensions to my preference
