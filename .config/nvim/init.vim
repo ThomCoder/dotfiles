@@ -489,9 +489,11 @@ nnoremap <silent> ]f :call
 function CopyFileBasename()
 	" Get filename without extension; this can later be used for searching
 	" things. E.g. i have file.c open and want so search for file.h
-	let foo = expand('%:r')
+	let foo = expand('%:rt')
+	let foo_list = split(foo, "/")
+	let basename = foo_list[-1]
 	" Copy this stuff to system clipboard
-	call setreg('+', foo)
+	call setreg('+', basename)
 endfunction
 
 " ToDo highlight on steroids
