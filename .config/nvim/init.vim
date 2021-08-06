@@ -76,6 +76,10 @@ map <A-p> "+P
 " Set up listchars (hidden characters); useful when setting \":set list\"
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
+" Enable completion where available.
+" This setting must be set before ALE is loaded.
+let g:ale_completion_enabled = 1
+
 """"""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""
