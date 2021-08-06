@@ -88,6 +88,7 @@ endif
 call plug#begin()
 
 " Autocomplete awesomeness
+Plug 'dense-analysis/ale'
 
 " Airline status line
 Plug 'vim-airline/vim-airline'
@@ -276,6 +277,20 @@ nnoremap <leader>C :Commands<CR>
 
 " Get the current filename without the extension to the clipboard
 nnoremap <leader>f :call CopyFileBasename()<CR>
+
+nnoremap <leader>ag :ALE
+nnoremap <leader>ad :ALEGoToDefinition<CR>
+nnoremap <leader>av :ALEGoToDefinition -vsplit<CR>
+nnoremap <leader>ax :ALEGoToDefinition -split<CR>
+nnoremap <leader>ar :ALEFindReferences<CR>
+nnoremap <leader>as :ALESymbolSearch 
+nnoremap <leader>ai :ALEImport<CR>
+nnoremap <C-Space>  :ALEComplete<CR>
+nnoremap <leader>at :ALEGoToTypeDefinition<CR>
+nnoremap <leader>ap :ALEPrevious<CR>
+nnoremap <leader>an :ALENext<CR>
+nnoremap <leader>al :ALEDetail<CR>
+nnoremap <leader>at :ALEToggle<CR>
 
 " _K_ill all buffers, but don't close (neo)vim
 nnoremap <leader>k :%bd<CR>
