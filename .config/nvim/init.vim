@@ -192,9 +192,8 @@ let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = 'Ɇ'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" I have no need for the error and warning sections of airline
-let g:airline_section_error = ''
-let g:airline_section_warning = ''
+" Display errors and warnings from ALE
+let g:airline#extensions#ale#enabled = 1
 
 " Set Goyo dimensions to my preference
 let g:goyo_height = "100%"
