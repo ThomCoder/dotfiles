@@ -104,6 +104,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 
 " The fuzzy finder (also includes Ripgrep)
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Filesystem tree viewer
