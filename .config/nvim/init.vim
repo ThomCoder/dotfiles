@@ -304,6 +304,10 @@ nnoremap <A-p> :tabprevious<CR>
 nnoremap <leader>b :Buffers<CR>
 " Open a fuzzy searchable command window with fzf.vim
 nnoremap <leader>C :Commands<CR>
+" Open a fuzzy searchable window showing all open buffers' lines with fzf.vim
+nnoremap <leader>l :Lines<CR>
+" Open a fuzzy searchable window showing all normal mode mappings with fzf.vim
+nnoremap <leader>m :Maps<CR>
 
 """"""""""""""""""""""""""""""""
 " Functions and Automatics
