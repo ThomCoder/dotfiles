@@ -132,9 +132,6 @@ Plug 'arzg/vim-colors-xcode'
 " Make moving splits less painful
 Plug 'wesQ3/vim-windowswap'
 
-" Ninja like buffer juggling
-Plug 'jeetsukumaran/vim-buffergator'
-
 " For when you are too lazy to type for movement
 Plug 'easymotion/vim-easymotion'
 
@@ -305,6 +302,9 @@ nnoremap <leader>w :ToggleWhitespace<CR>
 " Move between vim tabs more easily
 nnoremap <A-n> :tabnext<CR>
 nnoremap <A-p> :tabprevious<CR>
+
+" Access open buffers with fzf.vim
+nnoremap <leader>b :Buffers<CR>
 
 """"""""""""""""""""""""""""""""
 " Functions and Automatics
