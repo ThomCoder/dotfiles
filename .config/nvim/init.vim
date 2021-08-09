@@ -273,9 +273,6 @@ xnoremap <leader>d "_d
 xnoremap <leader>p "_dP
 vnoremap <leader>x "_x
 
-" Open a fuzzy searchable command window
-nnoremap <leader>C :Commands<CR>
-
 " Get the current filename without the extension to the clipboard
 nnoremap <leader>f :call CopyFileBasename()<CR>
 
@@ -305,6 +302,8 @@ nnoremap <A-p> :tabprevious<CR>
 
 " Access open buffers with fzf.vim
 nnoremap <leader>b :Buffers<CR>
+" Open a fuzzy searchable command window with fzf.vim
+nnoremap <leader>C :Commands<CR>
 
 """"""""""""""""""""""""""""""""
 " Functions and Automatics
