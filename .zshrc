@@ -88,6 +88,14 @@ export PATH=$PATH:/opt
 # Iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Homebrew shell completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 ############################################
 # Functions and quirks
 ############################################
