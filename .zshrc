@@ -85,6 +85,9 @@ export LANG=en_US.UTF-8
 export PATH=$PATH:/opt
 [ -f /usr/lib/ccache ] && export PATH=/usr/lib/ccache:$PATH
 
+# Iterm2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 ############################################
 # Functions and quirks
 ############################################
@@ -166,7 +169,4 @@ _force_rehash() {
   (( CURRENT == 1 )) && rehash
   return 1
 }
-
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
