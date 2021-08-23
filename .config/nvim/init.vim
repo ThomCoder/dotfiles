@@ -193,6 +193,12 @@ let g:airline_symbols.whitespace = 'Ξ'
 " Display errors and warnings from ALE
 let g:airline#extensions#ale#enabled = 1
 
+" airline sections disabled
+" let g:airline_section_error   (languageclient_error_count)
+let g:airline_section_error = ''
+" let g:airline_section_warning (languageclient_warning_count)
+let g:airline_section_warning = ''
+
 " Set Goyo dimensions to my preference
 let g:goyo_height = "100%"
 let g:goyo_width = 120
