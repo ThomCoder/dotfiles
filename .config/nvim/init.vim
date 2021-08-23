@@ -154,6 +154,10 @@ Plug 'tpope/vim-obsession'
 " Debugging - yes in VIM!
 Plug 'puremourning/vimspector'
 
+" Advanced syntax tree generation
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
