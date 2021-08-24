@@ -83,6 +83,9 @@ let g:ale_completion_enabled = 1
 " completeopt for nvim-compe
 set completeopt=menuone,noselect
 
+" Live substitution
+set inccommand=split
+
 """"""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""
