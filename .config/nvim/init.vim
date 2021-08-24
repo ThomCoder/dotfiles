@@ -107,9 +107,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 
-" The fuzzy finder (also includes Ripgrep)
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+" Fuzzy finding 2.0
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Filesystem tree viewer
 Plug 'scrooloose/nerdtree'
@@ -300,17 +300,6 @@ noremap k gk
 noremap gj j
 noremap gk k
 
-nnoremap <C-p> :Files<ENTER>
-if has('nvim')
-  aug fzf_setup
-    au!
-    au TermOpen term://*FZF tnoremap <silent> <buffer><nowait> <esc> <c-c>
-  aug END
-endif
-
-" FZF
-nmap <C-p> :Files<CR>
-
 " Nerdtree
 nmap <leader>n :NERDTreeFind<CR>
 nmap <leader>N :NERDTreeClose<CR>
@@ -394,21 +383,18 @@ nnoremap <leader>w :ToggleWhitespace<CR>
 nnoremap <A-n> :tabnext<CR>
 nnoremap <A-p> :tabprevious<CR>
 
-" Access open buffers with fzf.vim
-nnoremap <leader>b :Buffers<CR>
-" Open a fuzzy searchable command window with fzf.vim
-nnoremap <leader>C :Commands<CR>
-" Open a fuzzy searchable window showing all open buffers' lines with fzf.vim
-nnoremap <leader>l :Lines<CR>
-" Open a fuzzy searchable window showing all normal mode mappings with fzf.vim
-nnoremap <leader>m :Maps<CR>
-
 " nvim-compe
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 """"""""""""""""""""""""""""""""
 " Functions and Automatics
