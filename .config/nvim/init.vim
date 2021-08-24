@@ -214,9 +214,6 @@ let g:airline_section_warning = ''
 let g:goyo_height = "100%"
 let g:goyo_width = 120
 
-" Make RipGrep highlight the matches
-let g:rg_highlight = "true"
-
 " Make NERDCommenter comment out empty lines; helps when
 " commenting blocks and to make commented blocks stand
 " out better
