@@ -435,6 +435,12 @@ endfunction
 " syn match MyTodo contained "\<\(FIXME|NOTE|TODO|BUG|TRACE|XXX):"
 " hi def link MyTodo Todo
 
+" Highlight on yank
+augroup LuaHighlight
+  autocmd!
+  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+augroup END
+
 """"""""""""""""""""""""""""""""
 " Final touches
 " Some stuff just has to be
