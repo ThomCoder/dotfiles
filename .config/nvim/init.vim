@@ -162,6 +162,9 @@ Plug 'tpope/vim-obsession'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
+" Yakuake like drop down terminal
+Plug 'Lenovsky/nuake'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""
@@ -282,6 +285,13 @@ let g:compe.source.vsnip = v:true
 let g:compe.source.ultisnips = v:true
 let g:compe.source.luasnip = v:true
 let g:compe.source.emoji = v:true
+
+" Nuake
+nnoremap <F4> :Nuake<CR>
+inoremap <F4> <C-\><C-n>:Nuake<CR>
+tnoremap <F4> <C-\><C-n>:Nuake<CR>
+let nuake_position = 'top'
+let g:nuake_size = 0.33
 
 """"""""""""""""""""""""""""""""
 " Macros and keymaps
