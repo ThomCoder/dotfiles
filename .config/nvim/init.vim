@@ -158,9 +158,6 @@ Plug 'ntpeters/vim-better-whitespace'
 " Automatic handling of sessions
 Plug 'tpope/vim-obsession'
 
-" Debugging - yes in VIM!
-Plug 'puremourning/vimspector'
-
 " Advanced syntax tree generation
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
@@ -241,9 +238,6 @@ let g:mkdp_browser='chromium'
 " NERDTree
 " Regexes to ignore (e.g. I don't need object files)
 let g:NERDTreeIgnore = ['\.o$','\.a$','\.so$']
-
-" Vimspector (debugging tool)
-let g:vimspector_enable_mappings = 'HUMAN'
 
 " Tree-Sitter
 lua <<EOF
