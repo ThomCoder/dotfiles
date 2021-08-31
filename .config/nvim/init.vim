@@ -113,6 +113,9 @@ Plug 'airblade/vim-gitgutter'
 " Fuzzy finding 2.0
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+" See https://medium.com/swlh/neovim-lsp-dap-and-fuzzy-finder-60337ef08060 for
+" a tutorial
+Plug 'nvim-telescope/telescope-dap.nvim'
 
 " Filesystem tree viewer
 Plug 'scrooloose/nerdtree'
@@ -163,6 +166,9 @@ Plug 'nvim-treesitter/playground'
 
 " Yakuake like drop down terminal
 Plug 'Lenovsky/nuake'
+
+" Adding DAP to nvim
+Plug 'mfussenegger/nvim-dap'
 
 call plug#end()
 
@@ -396,6 +402,21 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+lua <<EOF
+require('telescope').load_extension('dap')
+EOF
+
+nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
+nnoremap <silent> <leader>dd :lua require('dap').continue()<CR>
+nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
+nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
+nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
+nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
+nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
+nnoremap <silent> <leader>dl :lua require'dap'.repl.run_last()<CR>`
 
 """"""""""""""""""""""""""""""""
 " Functions and Automatics
