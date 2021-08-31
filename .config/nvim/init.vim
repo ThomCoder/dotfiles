@@ -133,7 +133,6 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 
 " Colorschemes
-Plug 'morhetz/gruvbox'
 Plug 'arzg/vim-colors-xcode'
 
 " Make moving splits less painful
@@ -222,8 +221,6 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
 
 " Configure theming
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
 color xcodewwdc
 set background=dark
 
