@@ -1,6 +1,5 @@
 eco ayu
 e cfg.editor=vim
-e asm.pseudo=true
 e scr.utf8=true
 e scr.utf8.curvy=true
 e asm.middle=true
