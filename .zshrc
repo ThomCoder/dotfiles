@@ -103,6 +103,7 @@ fi
 precmd() { print "" }
 # Highlight first ambiguous character in tab-complete
 zstyle ':completion:*' show-ambiguity "$color[fg-red]"
+zstyle ':completion:*' completer _expand_alias _complete _ignored
 
 ############################################
 # General zsh flags
