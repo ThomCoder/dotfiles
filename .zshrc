@@ -53,13 +53,14 @@ alias dh='dirs -v'
 alias r='ranger'
 alias nvcfg='nvim ~/.config/nvim/init.vim'
 alias lhalt='ls -halt'
+alias ll='ls -l'
 alias l='ls -1'
 alias rg="rg --colors 'path:fg:yellow'"
 alias vim="nvim"
 alias t="true" # Solves an annoying bug displaying return codes in the shell
 alias vd="nvim -S Session.vim"
 alias spd="pandoc --reference-links" # Short for "standard pandoc"
-alias mcm="make clean && bear -- make -j8" # Short for make clean && make
+alias mcm="make clean && copiledb make -j8" # Short for make clean && make
 if [ -x "$(command -v trash-put)" ]; then
 	alias rm="trash-put"
 else
